@@ -1,0 +1,25 @@
+<h2 class="container">List Emplois</h2>
+search: <input type="text" [(ngModel)]="entreprise">
+
+<section *ngFor="let e of listeEmploi">
+
+    
+    <div *ngIf="e.entreprise == entreprise"   class="card" style="width: 18rem;">
+         <div class="card-body">
+          <h5 class="card-title"> {{e.titre}}</h5>
+          <h5 class="card-title"> {{e.entreprise}}</h5>
+         
+          <button class="btn btn-primary" (click)="postuler(e)" [disabled]="e.etat==false">Postuler</button><br><br>
+          <button class="btn btn-primary" (click)="calculer()">Bilan</button><br><br>
+          <h5 class="card-title"> {{nb}}</h5>
+          
+          
+          
+         
+    
+  
+        </div>
+    </div>
+
+
+</section>

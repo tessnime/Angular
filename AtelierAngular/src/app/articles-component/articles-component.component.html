@@ -1,0 +1,29 @@
+<h5>{{titre}}</h5>
+  <input [(ngModel)]="nb">
+<div *ngFor="let a of listeArticles" >
+    <div *ngIf="a.categorie!=='Travail'">
+
+    <div *ngIf="a.categorie!=='Education'">
+    <div class="border p-4" > 
+        <h5 class="card-title">{{a.titre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{a.auteur}}</h6>
+        <p class="card-text">{{a.contenu}}</p>
+        <a href="#" class="card-link">{{a.date}}</a>
+        <br>
+        <a href="#" class="card-link">{{a.categorie}}</a>
+    </div>
+    </div>
+    </div>
+    <div *ngIf="a.categorie=='Education'" >
+        <div  class="border p-4" style="background-color:rgba(0, 179, 255, 0.251) ;" >
+            <h5 class="card-title" >{{a.titre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{a.auteur}}</h6>
+            <p class="card-text">{{a.contenu}}</p>
+            <a href="#" class="card-link">{{a.date}}</a>
+            <br>
+            <a href="#" class="card-link">{{a.categorie}}</a>
+        </div>
+        </div>
+    </div>
+    
+    
